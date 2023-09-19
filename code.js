@@ -39,9 +39,25 @@ function playRound(playerSelection,computerSelection){
         }
     }
 }
-const moves = ['rock', 'paper', 'scissors']
 
+function game(){
+    for(let i=1;i<=5;i++){
+        playerSelection = prompt('make your choice:')
+      
+        if((moves.includes(playerSelection)) == false){
+            console.log('Choose between rock, paper, scissors')
+        } 
+        else{
+            console.log(playRound(playerSelection,getComputerChoice()))
+        }
+        
+    }
+}
 
+const moves = ["rock", 'paper', 'scissors']
+game()
+
+/*
 const playerSelection = "rock";
 const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(playerSelection, computerSelection));*/
